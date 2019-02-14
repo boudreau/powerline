@@ -21,16 +21,6 @@
 		"capslock_indicator": "paste_indicator",
 
 		"csv:column_number": "line_current",
-		"csv:column_name":   "line_current_symbol",
-
-		"tab_nc:modified_indicator": "modified_indicator",
-		"tab_nc:file_directory":     "information:unimportant",
-		"tab_nc:file_name":          "tab_nc:file_directory",
-		"tab_nc:tabnr":              "tab_nc:file_directory",
-
-		"buf_nc:file_directory":     "tab_nc:file_directory",
-		"buf_nc:file_name":          "tab_nc:file_name",
-		"buf_nc:bufnr":              "tab_nc:tabnr",
-		"buf_nc:modified_indicator": "tab_nc:modified_indicator"
+		"csv:column_name":   "line_current_symbol"
 	}
 }
