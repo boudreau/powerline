@@ -37,3 +37,4 @@ fi
 ```
 
 To modify the Shell Prompt, check the colorschemes/shell/__main__.json or themes/shell/__main__.json 
+To change colorscheme check the colorschemes/travis.json since that what we are using
