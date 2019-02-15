@@ -35,3 +35,5 @@ if [[ "$powerline_path" != ""  ]]; then
   source ${powerline_path}/bindings/bash/powerline.sh
 fi
 ```
+
+To modify the Shell Prompt, check the colorschemes/shell/__main__.json or themes/shell/__main__.json 
