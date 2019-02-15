@@ -58,7 +58,6 @@
 				"file_size":              { "fg": "solarized:base01", "bg": "solarized:base02", "attrs": [] },
 				"file_name_no_file":      { "fg": "solarized:base01", "bg": "solarized:base02", "attrs": ["bold"] },
 				"file_name_empty":        { "fg": "solarized:base01", "bg": "solarized:base02", "attrs": [] },
-				"file_format":            { "fg": "solarized:base02", "bg": "solarized:base2", "attrs": [] },
 				"file_vcs_status":        { "fg": "solarized:red", "bg": "solarized:base02", "attrs": [] },
 				"file_vcs_status_M":      { "fg": "solarized:yellow", "bg": "solarized:base02", "attrs": [] },
 				"file_vcs_status_A":      { "fg": "solarized:green", "bg": "solarized:base02", "attrs": [] },

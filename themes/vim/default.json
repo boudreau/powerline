@@ -16,11 +16,6 @@
 				"priority": 10
 			},
 			{
-				"function": "powerline.segments.vim.plugin.capslock.capslock_indicator",
-				"include_modes": ["i", "R", "Rv"],
-				"priority": 10
-			},
-			{
 				"function": "branch",
 				"exclude_modes": ["nc"],
 				"priority": 30
@@ -29,10 +24,6 @@
 				"function": "readonly_indicator",
 				"draw_soft_divider": false,
 				"after": " "
-			},
-			{
-				"function": "file_scheme",
-				"priority": 20
 			},
 			{
 				"function": "file_directory",
@@ -79,30 +70,10 @@
 		],
 		"right": [
 			{
-				"function": "file_format",
-				"draw_soft_divider": false,
-				"exclude_modes": ["nc"],
-				"priority": 60
-			},
-			{
-				"function": "file_encoding",
-				"exclude_modes": ["nc"],
-				"priority": 60
-			},
-			{
-				"function": "file_type",
-				"exclude_modes": ["nc"],
-				"priority": 60
-			},
-			{
 				"function": "line_percent",
 				"priority": 50,
 				"width": 4,
 				"align": "r"
-			},
-			{
-				"function": "csv_col_current",
-				"priority": 30
 			},
 			{
 				"type": "string",

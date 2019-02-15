@@ -1,20 +1,12 @@
 {
 	"groups": {
 		"branch_clean":       "branch",
-		"environment":        "information:unimportant",
-		"file_encoding":      "file_format",
 		"branch":             "information:additional",
 		"file_directory":     "information:additional",
 		"file_name_empty":    "file_directory",
 		"line_percent":       "information:additional",
 		"position":           "information:additional",
-		"many_tabs":          "line_current",
 		"bufnr":              "file_directory",
-		"winnr":              "information:unimportant",
-		"tabnr":              "file_directory",
-		"capslock_indicator": "paste_indicator",
-
-		"csv:column_number": "line_current",
-		"csv:column_name":   "line_current_symbol"
+		"tabnr":              "file_directory"
 	}
 }

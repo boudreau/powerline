@@ -23,6 +23,10 @@
 			{
 				"function": "powerline.segments.shell.jobnum",
 				"priority": 20
+			},
+			{
+				"function": "powerline_gitstatus.gitstatus",
+				"priority": 10
 			}
 		],
 		"right": [
