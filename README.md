@@ -1,6 +1,6 @@
 # My Custom [Powerline](https://github.com/powerline/powerline) Config
 
-For Mac OSX be sure to install pip
+For Unix be sure to install pip
 
 ```shell
 sudo easy_install pip
@@ -24,7 +24,7 @@ Clone this repo to your ~/.config directory
 git clone https://github.com/boudreau/powerline.git ~/.config/powerline
 ```
 
-Use the following shell script to start up powerline
+Use the following shell script to start up powerline in .bashrc
 
 ```shell
 powerline_path=$(python -c 'import pkgutil; print pkgutil.get_loader("powerline").filename' 2>/dev/null)
