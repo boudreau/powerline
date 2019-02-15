@@ -15,7 +15,7 @@ pip install --user powerline-status
 Add the pip executables directory to your path
 
 ```shell
-export PATH=~/Library/Python/2.7/bin:$PATH
+export PATH=~/.local/bin:$PATH
 ```
 
 Clone this repo to your ~/.config directory
