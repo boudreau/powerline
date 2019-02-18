@@ -17,6 +17,11 @@
 			"args": {
 				"hide_user": true
 			}
+		},
+		"gitstatus": {
+			"args": {
+				"use_dash_c": false
+			}
 		}
 	}
 }
