@@ -27,7 +27,7 @@ git clone https://github.com/boudreau/powerline.git ~/.config/powerline
 Use the following shell script to start up powerline in .bashrc
 
 ```shell
-powerline_path=$(python -c 'import pkgutil; print pkgutil.get_loader("powerline").filename' 2>/dev/null)
+powerline_path=$(python3 -c 'import os, powerline; print(os.path.dirname(powerline.__file__))' 2>/dev/null)
 if [[ "$powerline_path" != ""  ]]; then
   powerline-daemon -q
   POWERLINE_BASH_CONTINUATION=1
