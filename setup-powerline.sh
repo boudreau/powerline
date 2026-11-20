@@ -13,7 +13,13 @@ RC="$HOME/.bashrc"
 LOOKUP="powerline_path=\$(python3 -c 'import os, powerline; print(os.path.dirname(powerline.__file__))' 2>/dev/null)"
 
 command -v python3 >/dev/null || { echo "python3 not found; install it first" >&2; exit 1; }
-command -v git >/dev/null || { echo "git not found; install it first" >&2; exit 1; }
+if command -v git >/dev/null; then
+  HAVE_GIT=1
+else
+  HAVE_GIT=0
+  command -v curl >/dev/null || { echo "need git or curl to download the config; install one first" >&2; exit 1; }
+  echo "note: git not found; downloading the config as a tarball (the git status segment needs git to show)" >&2
+fi
 
 echo "== Python venv: $VENV"
 if [ ! -x "$VENV/bin/python" ]; then
@@ -23,13 +29,17 @@ fi
 "$VENV/bin/python" -m pip install -q --upgrade powerline-status powerline-gitstatus
 
 echo "== Config: $CONF"
-if [ -d "$CONF/.git" ]; then
+if [ -d "$CONF/.git" ] && [ "$HAVE_GIT" = 1 ]; then
   git -C "$CONF" pull -q --ff-only || echo "warning: could not update $CONF, keeping it as is" >&2
 elif [ -e "$CONF" ]; then
-  echo "warning: $CONF exists but is not a git clone; leaving it alone" >&2
-else
+  echo "warning: $CONF already exists and can't be updated with git; leaving it alone" >&2
+elif [ "$HAVE_GIT" = 1 ]; then
   mkdir -p "$(dirname "$CONF")"
   git clone -q https://github.com/boudreau/powerline.git "$CONF"
+else
+  mkdir -p "$CONF"
+  curl -fsSL https://github.com/boudreau/powerline/archive/refs/heads/master.tar.gz \
+    | tar -xz -C "$CONF" --strip-components=1
 fi
 
 echo "== Shell startup: $RC"
