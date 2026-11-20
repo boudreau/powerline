@@ -1,5 +1,24 @@
 # My Custom [Powerline](https://github.com/powerline/powerline) Config
 
+## Quick setup
+
+`setup-powerline.sh` does everything below in one go: it installs powerline-status and
+powerline-gitstatus in a Python 3 venv at `~/.venvs/powerline`, clones this repo to
+`~/.config/powerline`, and adds the loader to `~/.bashrc` (after backing it up). It needs
+`python3` and `git`, and is safe to re-run.
+
+```shell
+curl -fsSL https://raw.githubusercontent.com/boudreau/powerline/master/setup-powerline.sh | bash
+```
+
+Or, if this repo is already cloned to `~/.config/powerline`:
+
+```shell
+~/.config/powerline/setup-powerline.sh
+```
+
+## Manual setup
+
 For Unix be sure to install pip
 
 ```shell
